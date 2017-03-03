@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity
 //                    Log.e("JSON", "Sunt cu da "+str);
                     file = jo.getString("file");
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-                    alertDialogBuilder.setMessage("Exista o noua actualizare. \nPornesti download-ul?");
+                    alertDialogBuilder.setMessage("Update Found. \nStart Download?" + "\n" );
                     alertDialogBuilder.setPositiveButton("yes",
                             new DialogInterface.OnClickListener() {
                                 @Override
@@ -325,8 +325,6 @@ public class MainActivity extends AppCompatActivity
         request.setDescription("OTA Manager Firmware");
         request.setTitle("Downloading Update...");
         request.allowScanningByMediaScanner();
-
-//        request.setAllowedNetworkTypes(Request.NETWORK_WIFI);
         request.setAllowedOverRoaming(false);
 
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
@@ -373,7 +371,7 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public void run() {
                             mProgressBar.setProgress((int) dl_progress);
-                            progres.setText((int) dl_progress + "%");
+                            progres.setText((int) dl_progress + "% Downloaded");
                         }
                     });
 
@@ -383,10 +381,11 @@ public class MainActivity extends AppCompatActivity
             }
         }).start();
         return downloadReference;
+
+
     }
     @Override
     protected void onResume() {
-        // TODO Auto-generated method stub
         super.onResume();
 
         //        CheckDwnloadStatus();
@@ -398,7 +397,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onPause() {
-        // TODO Auto-generated method stub
         super.onPause();
         unregisterReceiver(downloadReceiver);
     }
