@@ -30,7 +30,7 @@
             <android.support.v7.widget.CardView
                 android:id="@+id/rom_informations"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="15dp"
@@ -72,7 +72,8 @@
                         android:text="/*Show Recovery Version*/"
                         android:textAlignment="center"
                         android:textColor="@color/cast_expanded_controller_background_color"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/textView3"
@@ -93,19 +94,19 @@
                         android:text="Android Version : "
                         android:textColor="@color/cast_expanded_controller_background_color"
                         android:textSize="18sp"
-                        android:layout_marginTop="14dp"
-                        android:layout_below="@+id/recoveryid_2"
-                        android:layout_toStartOf="@+id/textbuild"
-                        android:layout_marginEnd="9dp" />
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/textnumber"
+                        android:layout_marginStart="33dp" />
 
                     <TextView
                         android:id="@+id/textbuild"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignEnd="@+id/recoveryid_2"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="54dp"
-                        android:text="a-v-v"
+                        android:layout_below="@+id/textnumber"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@+id/textView27"
+                        android:text="a-v-v-mod"
                         android:textColor="@color/cast_expanded_controller_background_color"
                         android:textSize="18sp" />
 
@@ -168,7 +169,7 @@
             <android.support.v7.widget.CardView
                 android:id="@+id/update"
                 android:layout_width="match_parent"
-                android:layout_height="236dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/debug"
                 android:layout_marginTop="11dp"
@@ -176,7 +177,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="108dp">
 
                     <Button
                         android:id="@+id/button_update"
@@ -200,13 +201,14 @@
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
-                        android:layout_marginTop="36dp"
-                        android:visibility="invisible"
+                        android:layout_alignParentStart="true"
                         android:layout_below="@+id/textView26"
-                        android:layout_alignParentStart="true" />
+                        android:layout_marginTop="36dp"
+                        android:visibility="invisible" />
 
                     <Button
                         android:id="@+id/cancel_update"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/progressBar1"
@@ -218,34 +220,30 @@
                         android:id="@+id/progres"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="9dp"
                         android:text="TextView"
                         android:visibility="invisible"
-                        android:layout_marginBottom="9dp"
                         android:layout_alignBottom="@+id/progressBar1"
                         android:layout_alignParentEnd="true" />
 
-                    <TextView
-                        android:id="@+id/updatepost1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Reminder : Update postponed!"
-                        android:textAllCaps="false"
-                        android:textColor="@color/cast_expanded_controller_background_color"
-                        android:visibility="invisible"
-                        android:layout_marginBottom="9dp"
-                        android:layout_alignBottom="@+id/imagepost1"
-                        android:layout_toStartOf="@+id/progres" />
+                </RelativeLayout>
 
-                    <ImageView
-                        android:id="@+id/imagepost1"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginTop="41dp"
-                        android:visibility="invisible"
-                        app:srcCompat="@drawable/ic_info_black_24dp"
-                        android:layout_below="@+id/button_update"
-                        android:layout_toStartOf="@+id/updatepost1" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/debug"
+                android:layout_marginTop="11dp"
+                android:layout_weight="0.79"
+                android:visibility="visible"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
 
                 </RelativeLayout>
 

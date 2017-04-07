@@ -50,9 +50,7 @@ import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import android.content.pm.PackageManager;
-import static splusteam.center.ota.ota_center.R.id.imagepost1;
 import static splusteam.center.ota.ota_center.R.id.textdevice;
-import static splusteam.center.ota.ota_center.R.id.thing_proto;
 import android.Manifest;
 
 import android.webkit.WebView;
@@ -274,10 +272,6 @@ public class MainActivity extends AppCompatActivity
                                     //     Toast.makeText(MainActivity.this,file,Toast.LENGTH_LONG).show();
                                     Uri firmware_uri = Uri.parse(file_update);
                                     Firmware_DownloadId = DownloadData(firmware_uri, file_update);
-                                    final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                                    final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                                    image_update.setVisibility(View.INVISIBLE);
-                                    text_update.setVisibility(View.INVISIBLE);
                                 }
                             });
                     AlertDialog.Builder builder = alertDialogBuilder.setNegativeButton("Maybe later", new DialogInterface.OnClickListener() {
@@ -291,10 +285,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.VISIBLE);
-                            text_update.setVisibility(View.VISIBLE);
                         }
                     });
 
@@ -319,10 +309,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.INVISIBLE);
-                            text_update.setVisibility(View.INVISIBLE);
                         }
                     });
 
@@ -347,10 +333,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.INVISIBLE);
-                            text_update.setVisibility(View.INVISIBLE);
                         }
                     });
 
@@ -375,10 +357,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.INVISIBLE);
-                            text_update.setVisibility(View.INVISIBLE);
                         }
                     });
 
@@ -407,10 +385,6 @@ public class MainActivity extends AppCompatActivity
             progres.setVisibility(View.INVISIBLE);
             mProgressBar.setVisibility(View.INVISIBLE);
             cancel_update.setVisibility(View.INVISIBLE);
-            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-            image_update.setVisibility(View.INVISIBLE);
-            text_update.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -464,7 +438,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void btnSettings_OnClick(MenuItem item) {
-        Intent intent = new Intent(this, settings.class);
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 
