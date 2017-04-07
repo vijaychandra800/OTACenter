@@ -46,7 +46,15 @@
             android:summary="Automatic Check for Updates "
             android:title="Check for Updates interval" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Developers">
 
+        <Preference
+            android:title="Design and Coding : Iacob Ionut"
+            android:summary="Design and some Codes has made by Iacob Ionut"/>
+        <Preference
+            android:title="Codding and Server : Cristian Campean-Craciun"
+            android:summary="Hard Codding , Server Support and PHP codes has made by Cristian Campean-Craciun"/>
+    </PreferenceCategory>
 
 
 </PreferenceScreen>
